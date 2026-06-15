@@ -1,0 +1,15 @@
+# Virtual environment
+.venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Temp files created by scanned PDF extractor
+temp_pages/
+
+# Test files - not for git
+test_files/samplescan1.pdf

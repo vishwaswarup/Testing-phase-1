@@ -1,0 +1,12 @@
+python-magic
+python-magic-bin
+PyMuPDF
+python-docx
+rapidocr-onnxruntime
+Pillow
+spacy
+dateparser
+openai-whisper
+moviepy
+ffmpeg-python
+requests
