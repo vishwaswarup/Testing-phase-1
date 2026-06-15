@@ -35,6 +35,7 @@ Usage
 
 Then enter a file path when prompted. The file is first ingested
 (Phase 1), then the incident is extracted (Phase 1C).
+
 """
 
 import os
