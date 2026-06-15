@@ -211,11 +211,14 @@ def main():
 
     # Show a preview of the extracted text
     if doc.raw_text.strip():
-        preview = doc.raw_text[:500]
-        print("  --- Text Preview (first 500 chars) ---")
+        print("  --- Extracted Text ---")
         print()
-        print(preview)
-        if len(doc.raw_text) > 500:
+        if doc.source_type == "IMAGE" or len(doc.raw_text) <= 2000:
+            # Print full text for images or short documents
+            print(doc.raw_text.strip())
+        else:
+            # Truncate long documents (like huge PDFs)
+            print(doc.raw_text[:1000].strip())
             print("\n  ... (truncated)")
         print()
     #print("also the full text is:")

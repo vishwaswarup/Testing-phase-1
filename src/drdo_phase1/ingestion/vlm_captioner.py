@@ -12,7 +12,7 @@ import requests
 from PIL import Image
 
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
-VLM_MODEL = "moondream"
+VLM_MODEL = "llava"
 
 def generate_caption(image_path: str) -> str:
     """Generate a caption for a single image using Ollama."""
@@ -82,5 +82,10 @@ def process_video_frames(video_path: str, interval_seconds: int = 10) -> list:
             os.remove(frame_path)
     except Exception as e:
         print(f"  [VLM Error] Failed to process video frames: {e}")
+    finally:
+        try:
+            clip.close()
+        except:
+            pass
         
     return captions

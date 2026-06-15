@@ -79,7 +79,10 @@ def run_tests():
             # 2. Test Phase 2 (Extraction)
             try:
                 incident = build_incident(doc)
-                print(f"    [OK] Incident extraction successful. Summary: {incident.summary[:50]}...")
+                print(f"    [OK] Incident extraction successful.")
+                print(f"         Summary: {incident.summary}")
+                if doc.source_type == "IMAGE":
+                    print(f"         Image Text: {doc.raw_text.strip()}")
             except Exception as e:
                  raise RuntimeError(f"Incident Extraction Pipeline failed: {e}")
                  

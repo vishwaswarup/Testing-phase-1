@@ -165,6 +165,13 @@ SYSTEM_PROMPT = (
     "- Classify severity based on scale and strategic impact\n"
     "- Detail the modus operandi\n"
     "- Note any security response actions mentioned\n\n"
+    "CRITICAL ANTI-HALLUCINATION RULE:\n"
+    "If the text does NOT describe a military, terrorism, or security incident "
+    "(e.g., if it is an ordinary document, a cartoon, or a random image), "
+    "do NOT invent or hallucinate an incident. Instead, provide a brief, accurate "
+    "summary of what the text actually contains in the `summary` field, and "
+    "leave ALL incident-specific fields (casualties, groups, weapons, etc.) "
+    "as null or empty arrays.\n\n"
     "ONLY extract what is explicitly stated or can be directly inferred. "
     "If a field is unknown, use null.\n\n"
 )
